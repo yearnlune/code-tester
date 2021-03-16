@@ -1,9 +1,6 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import yearnlune.lab.codetester.solution.Solution;
 
@@ -17,36 +14,23 @@ import yearnlune.lab.codetester.solution.Solution;
 public class CompletedPlayerYet implements Solution {
 	@Override
 	public Object setUp() {
-		String[] participant = {"mislav", "stanko", "mislav", "ana"};
-		String[] completion = {"stanko", "ana", "mislav"};
+		String[] participant = {"a", "b", "c", "d"};
+		String[] completion = {"a", "c", "b"};
 
 		return solution(participant, completion);
 	}
 
 	public String solution(String[] participant, String[] completion) {
-		String answer = "";
+		Arrays.sort(participant);
+		Arrays.sort(completion);
 
-		if (completion.length < 1) {
-			return participant[0];
-		}
-
-		List<String> participantList = new ArrayList<>(Arrays.asList(participant));
-		List<String> completionList = new ArrayList<>(Arrays.asList(completion));
-
-		Collections.sort(participantList);
-		Collections.sort(completionList);
-
-		for (int i = 0; i < participantList.size(); ++i) {
-			if (i == participantList.size() - 1) {
-				answer = participantList.get(i);
-				break;
-			}
-			if (!participantList.get(i).equals(completionList.get(i))) {
-				answer = participantList.get(i);
-				break;
+		int i;
+		for (i = 0; i < completion.length; ++i) {
+			if (!participant[i].equals(completion[i])) {
+				return participant[i];
 			}
 		}
 
-		return answer;
+		return participant[i];
 	}
 }
