@@ -1,5 +1,6 @@
 package yearnlune.lab.codetester.handler;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import yearnlune.lab.codetester.solution.codility.CyclicRotation;
 import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
 import yearnlune.lab.codetester.solution.codility.PermMissingElem;
+import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 
 /**
  * Project : code-tester
@@ -38,6 +40,7 @@ public class SolutionHandler {
 		registerSolution(MaxCounters.class, "solution");
 		registerSolution(MaxProductOfThree.class, "solution");
 		registerSolution(PermMissingElem.class, "solution");
+		registerSolution(CompletedPlayerYet.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
