@@ -1,11 +1,13 @@
 package yearnlune.lab.codetester.handler;
 
-import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Array;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.sun.deploy.util.ArrayUtil;
 
 import yearnlune.lab.codetester.solution.Solution;
 import yearnlune.lab.codetester.solution.codility.BinaryGap;
@@ -16,6 +18,7 @@ import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
 import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
+import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 
 /**
@@ -43,6 +46,7 @@ public class SolutionHandler {
 		registerSolution(PermMissingElem.class, "solution");
 		registerSolution(CompletedPlayerYet.class, "solution");
 		registerSolution(PhoneNumberList.class, "solution");
+		registerSolution(KthNumber.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
@@ -92,7 +96,18 @@ public class SolutionHandler {
 		if (tClass.isPrimitive()) {
 			stringBuilder.append(t);
 		} else if (tClass.isArray()) {
-			stringBuilder.append(Arrays.stream(new Object[] {t}).toString());
+			if (t instanceof Object[]) {
+				stringBuilder.append(Arrays.deepToString((Object[]) t));
+			} else {
+				int tLength = Array.getLength(t);
+				Object[] output = new Object[tLength];
+
+				for (int i = 0; i < tLength; ++i) {
+					output[i] = Array.get(t, i);
+				}
+
+				stringBuilder.append(Arrays.toString(output));
+			}
 		} else {
 			System.out.println("OUTPUT TYPE: " + tClass.getSimpleName());
 			stringBuilder.append(t.toString());
