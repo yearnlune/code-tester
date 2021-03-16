@@ -16,6 +16,7 @@ import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
 import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
+import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 
 /**
  * Project : code-tester
@@ -41,6 +42,7 @@ public class SolutionHandler {
 		registerSolution(MaxProductOfThree.class, "solution");
 		registerSolution(PermMissingElem.class, "solution");
 		registerSolution(CompletedPlayerYet.class, "solution");
+		registerSolution(PhoneNumberList.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
