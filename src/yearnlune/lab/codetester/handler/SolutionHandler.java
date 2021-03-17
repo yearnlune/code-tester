@@ -7,8 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.sun.deploy.util.ArrayUtil;
-
 import yearnlune.lab.codetester.solution.Solution;
 import yearnlune.lab.codetester.solution.codility.BinaryGap;
 import yearnlune.lab.codetester.solution.codility.Brackets;
@@ -20,6 +18,7 @@ import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
+import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 
 /**
  * Project : code-tester
@@ -47,6 +46,7 @@ public class SolutionHandler {
 		registerSolution(CompletedPlayerYet.class, "solution");
 		registerSolution(PhoneNumberList.class, "solution");
 		registerSolution(KthNumber.class, "solution");
+		registerSolution(PracticeTest.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
@@ -97,7 +97,7 @@ public class SolutionHandler {
 			stringBuilder.append(t);
 		} else if (tClass.isArray()) {
 			if (t instanceof Object[]) {
-				stringBuilder.append(Arrays.deepToString((Object[]) t));
+				stringBuilder.append(Arrays.deepToString((Object[])t));
 			} else {
 				int tLength = Array.getLength(t);
 				Object[] output = new Object[tLength];
