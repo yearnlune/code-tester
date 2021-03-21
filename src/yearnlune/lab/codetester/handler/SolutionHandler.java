@@ -20,6 +20,7 @@ import yearnlune.lab.codetester.solution.programmers.GymSuit;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
+import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
 
 /**
  * Project : code-tester
@@ -49,6 +50,7 @@ public class SolutionHandler {
 		registerSolution(KthNumber.class, "solution");
 		registerSolution(PracticeTest.class, "solution");
 		registerSolution(GymSuit.class, "solution");
+		registerSolution(SelectTwoNumberAndThenAdd.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
