@@ -1,8 +1,5 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import yearnlune.lab.codetester.solution.Solution;
 
 /**
@@ -10,7 +7,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * Created by IntelliJ IDEA
  * Author : DONGHWAN, KIM
  * DATE : 2021.03.29
- * DESCRIPTION :
+ * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12951
  */
 public class JadenCase implements Solution {
 	@Override
