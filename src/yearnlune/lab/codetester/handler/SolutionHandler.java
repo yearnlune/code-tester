@@ -18,6 +18,7 @@ import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
 import yearnlune.lab.codetester.solution.programmers.GymSuit;
+import yearnlune.lab.codetester.solution.programmers.JadenCase;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
@@ -55,6 +56,7 @@ public class SolutionHandler {
 		registerSolution(SelectTwoNumberAndThenAdd.class, "solution");
 		registerSolution(TruckPassingTheBridge.class, "solution");
 		registerSolution(CustomStringSort.class, "solution");
+		registerSolution(JadenCase.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
