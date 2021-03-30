@@ -18,6 +18,7 @@ import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CandidateKey;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
+import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
 import yearnlune.lab.codetester.solution.programmers.GymSuit;
 import yearnlune.lab.codetester.solution.programmers.JadenCase;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
@@ -59,6 +60,7 @@ public class SolutionHandler {
 		registerSolution(CustomStringSort.class, "solution");
 		registerSolution(JadenCase.class, "solution");
 		registerSolution(CandidateKey.class, "solution");
+		registerSolution(FindPrimeNumber.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
