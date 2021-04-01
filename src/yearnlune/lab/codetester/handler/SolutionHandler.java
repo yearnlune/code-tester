@@ -22,6 +22,7 @@ import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
 import yearnlune.lab.codetester.solution.programmers.GymSuit;
 import yearnlune.lab.codetester.solution.programmers.JadenCase;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
+import yearnlune.lab.codetester.solution.programmers.MoreSpicy;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
@@ -61,6 +62,7 @@ public class SolutionHandler {
 		registerSolution(JadenCase.class, "solution");
 		registerSolution(CandidateKey.class, "solution");
 		registerSolution(FindPrimeNumber.class, "solution");
+		registerSolution(MoreSpicy.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
