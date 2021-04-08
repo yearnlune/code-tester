@@ -27,6 +27,7 @@ import yearnlune.lab.codetester.solution.programmers.MoreSpicy;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
+import yearnlune.lab.codetester.solution.programmers.StringCompression;
 import yearnlune.lab.codetester.solution.programmers.TruckPassingTheBridge;
 
 /**
@@ -65,6 +66,7 @@ public class SolutionHandler {
 		registerSolution(FindPrimeNumber.class, "solution");
 		registerSolution(MoreSpicy.class, "solution");
 		registerSolution(FindPrimeNumberCount.class, "solution");
+		registerSolution(StringCompression.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
