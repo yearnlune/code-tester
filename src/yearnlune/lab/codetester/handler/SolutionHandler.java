@@ -18,6 +18,7 @@ import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.CandidateKey;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
+import yearnlune.lab.codetester.solution.programmers.DecimalGame;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumberCount;
 import yearnlune.lab.codetester.solution.programmers.GymSuit;
@@ -67,6 +68,7 @@ public class SolutionHandler {
 		registerSolution(MoreSpicy.class, "solution");
 		registerSolution(FindPrimeNumberCount.class, "solution");
 		registerSolution(StringCompression.class, "solution");
+		registerSolution(DecimalGame.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
