@@ -23,6 +23,7 @@ import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumberCount;
 import yearnlune.lab.codetester.solution.programmers.GymSuit;
 import yearnlune.lab.codetester.solution.programmers.JadenCase;
+import yearnlune.lab.codetester.solution.programmers.JustThatSong;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.MoreSpicy;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
@@ -69,6 +70,7 @@ public class SolutionHandler {
 		registerSolution(FindPrimeNumberCount.class, "solution");
 		registerSolution(StringCompression.class, "solution");
 		registerSolution(DecimalGame.class, "solution");
+		registerSolution(JustThatSong.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
