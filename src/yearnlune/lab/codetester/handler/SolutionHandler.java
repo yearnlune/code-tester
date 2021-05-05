@@ -28,6 +28,7 @@ import yearnlune.lab.codetester.solution.programmers.JadenCase;
 import yearnlune.lab.codetester.solution.programmers.JustThatSong;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.MoreSpicy;
+import yearnlune.lab.codetester.solution.programmers.OneTwoFour;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
@@ -75,6 +76,7 @@ public class SolutionHandler {
 		registerSolution(JustThatSong.class, "solution");
 		registerSolution(BigNumber.class, "solution");
 		registerSolution(GameFestival.class, "solution");
+		registerSolution(OneTwoFour.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
