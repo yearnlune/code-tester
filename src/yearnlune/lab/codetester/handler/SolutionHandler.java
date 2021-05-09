@@ -16,6 +16,7 @@ import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
 import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.BigNumber;
+import yearnlune.lab.codetester.solution.programmers.CaesarPassword;
 import yearnlune.lab.codetester.solution.programmers.CandidateKey;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
@@ -77,6 +78,7 @@ public class SolutionHandler {
 		registerSolution(BigNumber.class, "solution");
 		registerSolution(GameFestival.class, "solution");
 		registerSolution(OneTwoFour.class, "solution");
+		registerSolution(CaesarPassword.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
