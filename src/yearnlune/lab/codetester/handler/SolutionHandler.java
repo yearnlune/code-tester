@@ -19,6 +19,7 @@ import yearnlune.lab.codetester.solution.programmers.BigNumber;
 import yearnlune.lab.codetester.solution.programmers.CaesarPassword;
 import yearnlune.lab.codetester.solution.programmers.CandidateKey;
 import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
+import yearnlune.lab.codetester.solution.programmers.CorrectParenthesis;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
 import yearnlune.lab.codetester.solution.programmers.DecimalGame;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
@@ -79,6 +80,7 @@ public class SolutionHandler {
 		registerSolution(GameFestival.class, "solution");
 		registerSolution(OneTwoFour.class, "solution");
 		registerSolution(CaesarPassword.class, "solution");
+		registerSolution(CorrectParenthesis.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
