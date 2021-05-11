@@ -31,6 +31,7 @@ import yearnlune.lab.codetester.solution.programmers.JustThatSong;
 import yearnlune.lab.codetester.solution.programmers.KthNumber;
 import yearnlune.lab.codetester.solution.programmers.MoreSpicy;
 import yearnlune.lab.codetester.solution.programmers.OneTwoFour;
+import yearnlune.lab.codetester.solution.programmers.ParenthesisRotation;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
@@ -81,6 +82,7 @@ public class SolutionHandler {
 		registerSolution(OneTwoFour.class, "solution");
 		registerSolution(CaesarPassword.class, "solution");
 		registerSolution(CorrectParenthesis.class, "solution");
+		registerSolution(ParenthesisRotation.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
