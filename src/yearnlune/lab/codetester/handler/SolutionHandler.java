@@ -22,6 +22,7 @@ import yearnlune.lab.codetester.solution.programmers.CompletedPlayerYet;
 import yearnlune.lab.codetester.solution.programmers.CorrectParenthesis;
 import yearnlune.lab.codetester.solution.programmers.CustomStringSort;
 import yearnlune.lab.codetester.solution.programmers.DecimalGame;
+import yearnlune.lab.codetester.solution.programmers.EvenAndOdd;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumber;
 import yearnlune.lab.codetester.solution.programmers.FindPrimeNumberCount;
 import yearnlune.lab.codetester.solution.programmers.GameFestival;
@@ -83,6 +84,7 @@ public class SolutionHandler {
 		registerSolution(CaesarPassword.class, "solution");
 		registerSolution(CorrectParenthesis.class, "solution");
 		registerSolution(ParenthesisRotation.class, "solution");
+		registerSolution(EvenAndOdd.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
