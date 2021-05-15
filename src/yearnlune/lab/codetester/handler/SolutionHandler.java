@@ -38,6 +38,7 @@ import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
 import yearnlune.lab.codetester.solution.programmers.StringCompression;
 import yearnlune.lab.codetester.solution.programmers.TruckPassingTheBridge;
+import yearnlune.lab.codetester.solution.programmers.UniqueNumber;
 
 /**
  * Project : code-tester
@@ -85,6 +86,7 @@ public class SolutionHandler {
 		registerSolution(CorrectParenthesis.class, "solution");
 		registerSolution(ParenthesisRotation.class, "solution");
 		registerSolution(EvenAndOdd.class, "solution");
+		registerSolution(UniqueNumber.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
