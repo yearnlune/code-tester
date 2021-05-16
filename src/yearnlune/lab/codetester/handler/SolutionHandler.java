@@ -35,6 +35,7 @@ import yearnlune.lab.codetester.solution.programmers.OneTwoFour;
 import yearnlune.lab.codetester.solution.programmers.ParenthesisRotation;
 import yearnlune.lab.codetester.solution.programmers.PhoneNumberList;
 import yearnlune.lab.codetester.solution.programmers.PracticeTest;
+import yearnlune.lab.codetester.solution.programmers.PyChecker;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
 import yearnlune.lab.codetester.solution.programmers.StringCompression;
 import yearnlune.lab.codetester.solution.programmers.TruckPassingTheBridge;
@@ -87,6 +88,7 @@ public class SolutionHandler {
 		registerSolution(ParenthesisRotation.class, "solution");
 		registerSolution(EvenAndOdd.class, "solution");
 		registerSolution(UniqueNumber.class, "solution");
+		registerSolution(PyChecker.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
