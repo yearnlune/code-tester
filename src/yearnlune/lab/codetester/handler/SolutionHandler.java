@@ -38,6 +38,7 @@ import yearnlune.lab.codetester.solution.programmers.PracticeTest;
 import yearnlune.lab.codetester.solution.programmers.PyChecker;
 import yearnlune.lab.codetester.solution.programmers.SelectTwoNumberAndThenAdd;
 import yearnlune.lab.codetester.solution.programmers.StringCompression;
+import yearnlune.lab.codetester.solution.programmers.TheLeastCommonMultiple;
 import yearnlune.lab.codetester.solution.programmers.TruckPassingTheBridge;
 import yearnlune.lab.codetester.solution.programmers.UniqueNumber;
 
@@ -89,6 +90,7 @@ public class SolutionHandler {
 		registerSolution(EvenAndOdd.class, "solution");
 		registerSolution(UniqueNumber.class, "solution");
 		registerSolution(PyChecker.class, "solution");
+		registerSolution(TheLeastCommonMultiple.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
