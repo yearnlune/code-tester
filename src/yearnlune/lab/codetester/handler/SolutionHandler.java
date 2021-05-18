@@ -14,6 +14,7 @@ import yearnlune.lab.codetester.solution.codility.CountDiv;
 import yearnlune.lab.codetester.solution.codility.CyclicRotation;
 import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
+import yearnlune.lab.codetester.solution.codility.OddOccurrencesInArray;
 import yearnlune.lab.codetester.solution.codility.PermMissingElem;
 import yearnlune.lab.codetester.solution.programmers.BigNumber;
 import yearnlune.lab.codetester.solution.programmers.CaesarPassword;
@@ -91,20 +92,17 @@ public class SolutionHandler {
 		registerSolution(UniqueNumber.class, "solution");
 		registerSolution(PyChecker.class, "solution");
 		registerSolution(TheLeastCommonMultiple.class, "solution");
+		registerSolution(OddOccurrencesInArray.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
 		String solutionName = solution.getSimpleName();
 
 		solutionFactory.computeIfAbsent(solutionName, s -> {
-			SolutionMeta solutionMeta;
-
-			solutionMeta = SolutionMeta.builder()
+			return SolutionMeta.builder()
 				.solution(solution)
 				.solutionMethod(findMethod(solution, methodName))
 				.build();
-
-			return solutionMeta;
 		});
 	}
 
