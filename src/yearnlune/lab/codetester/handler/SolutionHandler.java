@@ -8,16 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import yearnlune.lab.codetester.solution.Solution;
-import yearnlune.lab.codetester.solution.codility.BinaryGap;
-import yearnlune.lab.codetester.solution.codility.Brackets;
-import yearnlune.lab.codetester.solution.codility.CountDiv;
-import yearnlune.lab.codetester.solution.codility.CyclicRotation;
-import yearnlune.lab.codetester.solution.codility.FrogJmp;
-import yearnlune.lab.codetester.solution.codility.MaxCounters;
-import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
-import yearnlune.lab.codetester.solution.codility.MissingInteger;
-import yearnlune.lab.codetester.solution.codility.OddOccurrencesInArray;
-import yearnlune.lab.codetester.solution.codility.PermMissingElem;
+import yearnlune.lab.codetester.solution.codility.*;
 import yearnlune.lab.codetester.solution.programmers.BigNumber;
 import yearnlune.lab.codetester.solution.programmers.CaesarPassword;
 import yearnlune.lab.codetester.solution.programmers.CandidateKey;
@@ -97,6 +88,7 @@ public class SolutionHandler {
 		registerSolution(OddOccurrencesInArray.class, "solution");
 		registerSolution(FrogJmp.class, "solution");
 		registerSolution(MissingInteger.class, "solution");
+		registerSolution(GenomicRangeQuery.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
