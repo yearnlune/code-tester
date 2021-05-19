@@ -12,6 +12,7 @@ import yearnlune.lab.codetester.solution.codility.BinaryGap;
 import yearnlune.lab.codetester.solution.codility.Brackets;
 import yearnlune.lab.codetester.solution.codility.CountDiv;
 import yearnlune.lab.codetester.solution.codility.CyclicRotation;
+import yearnlune.lab.codetester.solution.codility.FrogJmp;
 import yearnlune.lab.codetester.solution.codility.MaxCounters;
 import yearnlune.lab.codetester.solution.codility.MaxProductOfThree;
 import yearnlune.lab.codetester.solution.codility.OddOccurrencesInArray;
@@ -93,6 +94,7 @@ public class SolutionHandler {
 		registerSolution(PyChecker.class, "solution");
 		registerSolution(TheLeastCommonMultiple.class, "solution");
 		registerSolution(OddOccurrencesInArray.class, "solution");
+		registerSolution(FrogJmp.class, "solution");
 	}
 
 	private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
