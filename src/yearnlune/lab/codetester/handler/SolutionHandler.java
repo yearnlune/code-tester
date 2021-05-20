@@ -66,6 +66,7 @@ public class SolutionHandler {
         registerSolution(GenomicRangeQuery.class, "solution");
         registerSolution(Distinct.class, "solution");
         registerSolution(Fish.class, "solution");
+        registerSolution(Dominator.class, "solution");
     }
 
     private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
