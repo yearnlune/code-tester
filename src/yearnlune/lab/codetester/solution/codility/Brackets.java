@@ -13,19 +13,19 @@ import yearnlune.lab.codetester.solution.Solution;
  */
 public class Brackets implements Solution {
 	int answer = 1;
-	Stack<String> stack = new Stack<>();
+	Stack<Character> stack = new Stack<>();
 
 	@Override
 	public Object setUp() {
-		return null;
+		String S = "{[()()]}";
+
+		return solution(S);
 	}
 
 	public int solution(String S) {
 		for (char c : S.toCharArray()) {
-			String s = String.valueOf(c);
-
-			if (!isNested(s)) {
-				stack.push(s);
+			if (!isNested(c)) {
+				stack.push(c);
 			} else {
 				stack.pop();
 			}
@@ -38,28 +38,27 @@ public class Brackets implements Solution {
 		return answer;
 	}
 
-	public boolean isNested(String s) {
+	private boolean isNested(char s) {
 		boolean isNested = false;
 
 		if (stack.empty())
 			return false;
 
-		String lastElement = stack.peek();
+		char lastElement = stack.peek();
 		switch (s) {
-			case "]":
-				if (lastElement.equals("["))
+			case ']':
+				if (lastElement == '[')
 					isNested = true;
 				break;
-			case "}":
-				if (lastElement.equals("{"))
+			case '}':
+				if (lastElement == '{')
 					isNested = true;
 				break;
-			case ")":
-				if (lastElement.equals("("))
+			case ')':
+				if (lastElement == '(')
 					isNested = true;
 				break;
 			default:
-
 		}
 		return isNested;
 	}
