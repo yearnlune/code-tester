@@ -67,6 +67,7 @@ public class SolutionHandler {
         registerSolution(Distinct.class, "solution");
         registerSolution(Fish.class, "solution");
         registerSolution(Dominator.class, "solution");
+        registerSolution(MaxProfit.class, "solution");
     }
 
     private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
