@@ -7,7 +7,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * Created by IntelliJ IDEA
  * Author : DONGHWAN, KIM
  * DATE : 2021.05.21
- * DESCRIPTION :
+ * DESCRIPTION : https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
  */
 public class MaxProfit implements Solution {
     @Override
