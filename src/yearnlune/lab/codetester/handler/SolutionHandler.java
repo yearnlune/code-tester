@@ -69,6 +69,7 @@ public class SolutionHandler {
         registerSolution(Dominator.class, "solution");
         registerSolution(MaxProfit.class, "solution");
         registerSolution(CountFactors.class, "solution");
+        registerSolution(Divisor.class, "solution");
     }
 
     private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
