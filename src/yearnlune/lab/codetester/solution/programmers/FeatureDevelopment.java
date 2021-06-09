@@ -11,7 +11,7 @@ import java.util.List;
  * Created by IntelliJ IDEA
  * Author : DONGHWAN, KIM
  * DATE : 2021.06.10
- * DESCRIPTION :
+ * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42586
  */
 public class FeatureDevelopment implements Solution {
     @Override

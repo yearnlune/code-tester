@@ -71,6 +71,7 @@ public class SolutionHandler {
         registerSolution(CountFactors.class, "solution");
         registerSolution(Divisor.class, "solution");
         registerSolution(TapeEquilibrium.class, "solution");
+        registerSolution(FeatureDevelopment.class, "solution");
     }
 
     private <T extends Solution> void registerSolution(Class<T> solution, String methodName) {
