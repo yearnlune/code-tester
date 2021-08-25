@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.Stack;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,13 +12,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.11
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12909
  */
-public class CorrectParenthesis implements Solution {
+public class CorrectParenthesis implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String s = "(())())()(";
 		return solution(s);
 	}
 
+    @MainFunction
 	boolean solution(String s) {
 		Stack<Character> stack = new Stack<>();
 

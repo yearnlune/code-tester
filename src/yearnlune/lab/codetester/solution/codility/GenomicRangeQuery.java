@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
  * DATE : 2021.05.20
  * DESCRIPTION : https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/
  */
-public class GenomicRangeQuery implements Solution {
+public class GenomicRangeQuery implements SolutionBase {
     @Override
     public Object setUp() {
         String S = "CAGCCTA";
@@ -22,6 +23,7 @@ public class GenomicRangeQuery implements Solution {
         return solution(S, P, Q);
     }
 
+    @MainFunction
     public int[] solution(String S, int[] P, int[] Q) {
         final Map<Character, Integer> dnaMeta = initDnaMeta();
         int[] answer = new int[P.length];

@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -13,7 +14,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.28
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12915
  */
-public class CustomStringSort implements Solution {
+public class CustomStringSort implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String[] strings = {"sun", "bed", "car"};
@@ -22,6 +23,7 @@ public class CustomStringSort implements Solution {
 		return solution(strings, n);
 	}
 
+    @MainFunction
 	public String[] solution(String[] strings, int n) {
 		String[] answer = new String[strings.length];
 		List<String> stringList = new ArrayList<>();

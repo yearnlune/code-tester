@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.programmers;
 import java.util.HashSet;
 import java.util.Set;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,7 +13,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.29
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42890
  */
-public class CandidateKey implements Solution {
+public class CandidateKey implements SolutionBase {
 	String[][] relation;
 	Set<String> candidateHashSet = new HashSet<>();
 
@@ -27,6 +28,7 @@ public class CandidateKey implements Solution {
 		return solution(relation);
 	}
 
+    @MainFunction
 	public int solution(String[][] relation) {
 		this.relation = relation;
 		int maxColumnLength = relation[0].length;

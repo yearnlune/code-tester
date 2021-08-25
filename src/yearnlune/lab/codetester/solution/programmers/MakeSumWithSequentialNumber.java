@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,12 +10,13 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.02.28
  * DESCRIPTION : 연속된 숫자로 sum 구하기
  */
-public class MakeSumWithSequentialNumber implements Solution {
+public class MakeSumWithSequentialNumber implements SolutionBase {
 	@Override
 	public Object setUp() {
 		return null;
 	}
 
+    @MainFunction
 	public int solution(int n) {
 		int answer = 0;
 		for (int startWith = 1; startWith <= n; startWith++) {

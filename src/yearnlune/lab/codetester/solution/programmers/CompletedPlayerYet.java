@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.Arrays;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,7 +12,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.16
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42576
  */
-public class CompletedPlayerYet implements Solution {
+public class CompletedPlayerYet implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String[] participant = {"a", "b", "c", "d"};
@@ -20,6 +21,7 @@ public class CompletedPlayerYet implements Solution {
 		return solution(participant, completion);
 	}
 
+    @MainFunction
 	public String solution(String[] participant, String[] completion) {
 		Arrays.sort(participant);
 		Arrays.sort(completion);

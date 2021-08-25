@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.Arrays;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,13 +12,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.01
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42746
  */
-public class BigNumber implements Solution {
+public class BigNumber implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] numbers = {6, 10, 2};
 		return solution(numbers);
 	}
 
+    @MainFunction
 	public String solution(int[] numbers) {
 		String stringNumber = Arrays.stream(numbers)
 			.mapToObj(String::valueOf)

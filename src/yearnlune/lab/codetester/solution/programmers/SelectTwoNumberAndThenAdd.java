@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.programmers;
 import java.util.HashSet;
 import java.util.Set;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,13 +13,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.21
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/68644
  */
-public class SelectTwoNumberAndThenAdd implements Solution {
+public class SelectTwoNumberAndThenAdd implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] numbers = {5, 0, 2, 7};
 		return solution(numbers);
 	}
 
+    @MainFunction
 	public int[] solution(int[] numbers) {
 		Set<Integer> answerSet = new HashSet<>();
 

@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.04.19
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12985
  */
-public class GameFestival implements Solution {
+public class GameFestival implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int n = 8;
@@ -18,6 +19,7 @@ public class GameFestival implements Solution {
 		return solution(n, a, b);
 	}
 
+    @MainFunction
 	public int solution(int n, int a, int b) {
 		int answer = 0;
 

@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.programmers;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,7 +13,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.22
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42583
  */
-public class TruckPassingTheBridge implements Solution {
+public class TruckPassingTheBridge implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int bridgeLength = 100;
@@ -22,6 +23,7 @@ public class TruckPassingTheBridge implements Solution {
 		return solution(bridgeLength, weight, truckWeights);
 	}
 
+    @MainFunction
 	public int solution(int bridgeLength, int weight, int[] truckWeights) {
 		int answer = 0;
 		int passedTruckCount = 0;

@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.19
  * DESCRIPTION : https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/start/
  */
-public class FrogJmp implements Solution {
+public class FrogJmp implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int X = 10;
@@ -19,6 +20,7 @@ public class FrogJmp implements Solution {
 		return solution(X, Y, D);
 	}
 
+    @MainFunction
 	public int solution(int X, int Y, int D) {
 		return (Y-X) % D == 0 ? (Y-X) / D : (Y-X) / D + 1;
 	}

@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.programmers;
 import java.util.HashSet;
 import java.util.Set;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,7 +13,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.30
  * DESCRIPTION :
  */
-public class FindPrimeNumber implements Solution {
+public class FindPrimeNumber implements SolutionBase {
 	Set<Integer> set = new HashSet<>();
 
 	@Override
@@ -21,6 +22,7 @@ public class FindPrimeNumber implements Solution {
 		return solution(numbers);
 	}
 
+    @MainFunction
 	public int solution(String numbers) {
 		String[] numberArray = new String[numbers.length()];
 

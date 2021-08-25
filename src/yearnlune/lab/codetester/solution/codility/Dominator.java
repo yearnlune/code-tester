@@ -1,9 +1,10 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,14 +13,15 @@ import java.util.Map;
  * DATE : 2021.05.20
  * DESCRIPTION : https://app.codility.com/programmers/lessons/8-leader/dominator/
  */
-public class Dominator implements Solution {
+public class Dominator implements SolutionBase {
     @Override
     public Object setUp() {
-        int[] A = {2,1,1,3};
+        int[] A = {2, 1, 1, 3};
 
         return solution(A);
     }
 
+    @MainFunction
     public int solution(int[] A) {
         Map<Integer, Integer> votes = new HashMap<>();
         Map<Integer, Integer> leaders = new HashMap<>();

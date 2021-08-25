@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.Stack;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,13 +12,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.12
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/76502
  */
-public class ParenthesisRotation implements Solution {
+public class ParenthesisRotation implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String s = "}]()[{";
 		return solution(s);
 	}
 
+    @MainFunction
 	public int solution(String s) {
 		int answer = 0;
 		Stack<Character> stack = new Stack<>();

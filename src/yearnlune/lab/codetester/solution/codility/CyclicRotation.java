@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,13 +10,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.02.27
  * DESCRIPTION : https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
  */
-public class CyclicRotation implements Solution {
+public class CyclicRotation implements SolutionBase {
 
 	@Override
 	public Object setUp() {
-		return null;
+		return solution(new int[]{1, 2}, 3);
 	}
 
+    @MainFunction
 	public int[] solution(int[] A, int K) {
 		int[] solve = new int[A.length];
 

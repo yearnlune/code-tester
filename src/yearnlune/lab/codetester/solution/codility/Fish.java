@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 import java.util.Stack;
 
@@ -11,7 +12,7 @@ import java.util.Stack;
  * DATE : 2021.05.20
  * DESCRIPTION : https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/
  */
-public class Fish implements Solution {
+public class Fish implements SolutionBase {
     @Override
     public Object setUp() {
         int[] A = {4, 3, 2, 1, 5};
@@ -20,6 +21,7 @@ public class Fish implements Solution {
         return solution(A, B);
     }
 
+    @MainFunction
     public int solution(int[] A, int[] B) {
         int upFishCount = 0;
         Stack<Integer> downFish = new Stack<>();

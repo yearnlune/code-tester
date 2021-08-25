@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.Arrays;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,7 +12,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.16
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42748
  */
-public class KthNumber implements Solution {
+public class KthNumber implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] array = {1, 5, 2, 6, 3, 7, 4};
@@ -19,6 +20,7 @@ public class KthNumber implements Solution {
 		return solution(array, commands);
 	}
 
+    @MainFunction
 	public int[] solution(int[] array, int[][] commands) {
 		int[] answer = new int[commands.length];
 

@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.codility;
 import java.util.HashSet;
 import java.util.Set;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,7 +13,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.19
  * DESCRIPTION : https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
  */
-public class OddOccurrencesInArray implements Solution {
+public class OddOccurrencesInArray implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] A = {9, 3, 9, 3, 9, 7, 9};
@@ -20,6 +21,7 @@ public class OddOccurrencesInArray implements Solution {
 		return solution(A);
 	}
 
+    @MainFunction
 	public int solution(int[] A) {
 		int answer = 0;
 		Set<Integer> numberCounters = new HashSet<>();

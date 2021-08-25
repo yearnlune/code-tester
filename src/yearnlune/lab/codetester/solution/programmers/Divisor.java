@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import java.util.List;
  * DATE : 2021.05.24
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12910
  */
-public class Divisor implements Solution {
+public class Divisor implements SolutionBase {
     @Override
     public Object setUp() {
         int[] arr = {5, 9, 7, 10};
@@ -21,6 +22,7 @@ public class Divisor implements Solution {
         return solution(arr, divisor);
     }
 
+    @MainFunction
     public int[] solution(int[] arr, int divisor) {
         List<Integer> answer = new ArrayList<>();
         Arrays.sort(arr);

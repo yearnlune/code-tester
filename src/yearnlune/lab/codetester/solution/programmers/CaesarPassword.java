@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.10
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12926
  */
-public class CaesarPassword implements Solution {
+public class CaesarPassword implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String s = "z Z a B";
@@ -18,6 +19,7 @@ public class CaesarPassword implements Solution {
 		return solution(s, n);
 	}
 
+    @MainFunction
 	public String solution(String s, int n) {
 		String answer = "";
 

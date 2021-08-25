@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.04.12
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/17687
  */
-public class DecimalGame implements Solution {
+public class DecimalGame implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int n = 16;
@@ -19,6 +20,7 @@ public class DecimalGame implements Solution {
 		return solution(n, t, m, p);
 	}
 
+    @MainFunction
 	public String solution(int n, int t, int m, int p) {
 		StringBuilder totalStringBuilder = new StringBuilder();
 		StringBuilder answerStringBuilder = new StringBuilder();

@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.04.15
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/17683
  */
-public class JustThatSong implements Solution {
+public class JustThatSong implements SolutionBase {
 
 	@Override
 	public Object setUp() {
@@ -18,6 +19,7 @@ public class JustThatSong implements Solution {
 		return solution(m, musicInfos);
 	}
 
+    @MainFunction
 	public String solution(String m, String[] musicInfos) {
 		String answer = "(None)";
 		int longer = Integer.MIN_VALUE;

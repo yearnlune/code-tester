@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.08.06
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/82612
  */
-public class CalculateInsufficientAmount implements Solution {
+public class CalculateInsufficientAmount implements SolutionBase {
 
     @Override
     public Object setUp() {
@@ -20,6 +21,7 @@ public class CalculateInsufficientAmount implements Solution {
         return solution(price, money, count);
     }
 
+    @MainFunction
     public long solution(int price, int money, int count) {
         long answer = 0;
         long totalCost = 0;

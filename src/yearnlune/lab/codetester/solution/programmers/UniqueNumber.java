@@ -3,7 +3,8 @@ package yearnlune.lab.codetester.solution.programmers;
 import java.util.ArrayList;
 import java.util.List;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,13 +13,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.15
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/12906
  */
-public class UniqueNumber implements Solution {
+public class UniqueNumber implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] arr = {1,1,3,3,0,1,1};
 		return solution(arr);
 	}
 
+    @MainFunction
 	public int[] solution(int[] arr) {
 		List<Integer> answer = new ArrayList<>();
 		int temp;

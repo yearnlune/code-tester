@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,13 +10,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.04.08
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/60057
  */
-public class StringCompression implements Solution {
+public class StringCompression implements SolutionBase {
 	@Override
 	public Object setUp() {
 		String s = "aaaaaaaaaaaaaaaa";
 		return solution(s);
 	}
 
+    @MainFunction
 	public int solution(String s) {
 		int answer = s.length();
 		int stringLength = s.length();

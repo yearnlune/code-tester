@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -14,7 +15,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.20
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42862
  */
-public class GymSuit implements Solution {
+public class GymSuit implements SolutionBase {
 	Map<Integer, Integer> reservedMap = new HashMap<>();
 	int answer = 0;
 
@@ -27,6 +28,7 @@ public class GymSuit implements Solution {
 		return solution(n, lost, reserve);
 	}
 
+    @MainFunction
 	public int solution(int n, int[] lost, int[] reserve) {
 		Map<Integer, Integer> lostMap = Arrays.stream(lost)
 			.boxed()

@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.02.27
  * DESCRIPTION : https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
  */
-public class BinaryGap implements Solution {
+public class BinaryGap implements SolutionBase {
 
 	@Override
 	public Object setUp() {
@@ -17,6 +18,7 @@ public class BinaryGap implements Solution {
 		return solution(N);
 	}
 
+	@MainFunction
 	public int solution(int N) {
 		int solutionValue = 0;
 		String binaryString = Integer.toBinaryString(N);

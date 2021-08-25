@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.programmers;
 
 import java.util.PriorityQueue;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,7 +12,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.04.01
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42626
  */
-public class MoreSpicy implements Solution {
+public class MoreSpicy implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] scoville = {1, 2, 3, 9, 10, 12};
@@ -20,6 +21,7 @@ public class MoreSpicy implements Solution {
 		return solution(scoville, k);
 	}
 
+    @MainFunction
 	public int solution(int[] scovilles, int k) {
 		int answer = -1;
 		int min = 0;

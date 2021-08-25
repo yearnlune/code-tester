@@ -7,6 +7,6 @@ package yearnlune.lab.codetester.solution;
  * DATE : 2021.03.15
  * DESCRIPTION :
  */
-public interface Solution {
+public interface SolutionBase {
 	Object setUp();
 }

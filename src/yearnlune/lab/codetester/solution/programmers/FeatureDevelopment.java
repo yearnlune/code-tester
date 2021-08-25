@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -13,7 +14,7 @@ import java.util.List;
  * DATE : 2021.06.10
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42586
  */
-public class FeatureDevelopment implements Solution {
+public class FeatureDevelopment implements SolutionBase {
     @Override
     public Object setUp() {
         int[] progresses = {95, 90, 99, 99, 80, 99};
@@ -21,6 +22,7 @@ public class FeatureDevelopment implements Solution {
         return solution(progresses, speeds);
     }
 
+    @MainFunction
     public int[] solution(int[] progresses, int[] speeds) {
         List<Integer> deployCounts = new ArrayList<>();
         LinkedList<Integer> estimatedDays = new LinkedList<>();

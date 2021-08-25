@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.programmers;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,13 +10,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.13
  * DESCRIPTION :
  */
-public class EvenAndOdd implements Solution {
+public class EvenAndOdd implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int num = -9;
 		return solution(num);
 	}
 
+    @MainFunction
 	public String solution(int num) {
 		String[] answers = {"Odd", "Even", "Odd"};
 

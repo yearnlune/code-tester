@@ -6,7 +6,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -15,7 +16,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.02.28
  * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/72411
  */
-public class MenuRenewal implements Solution {
+public class MenuRenewal implements SolutionBase {
 	HashMap<String, Integer> candidateMapByCourseSize;
 	int maxOrderByCourseSize;
 
@@ -24,6 +25,7 @@ public class MenuRenewal implements Solution {
 		return null;
 	}
 
+    @MainFunction
 	public String[] solution(String[] orders, int[] course) {
 		List<String> answerList = new ArrayList<>();
 

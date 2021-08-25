@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,7 +10,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.05.21
  * DESCRIPTION : https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
  */
-public class MaxProfit implements Solution {
+public class MaxProfit implements SolutionBase {
     @Override
     public Object setUp() {
         int[] A = {23171, 21011, 21123, 21366, 21013, 21367};
@@ -17,6 +18,7 @@ public class MaxProfit implements Solution {
         return solution(A);
     }
 
+    @MainFunction
     public int solution(int[] A) {
         int answer = 0;
 

@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -9,13 +10,14 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.06.07
  * DESCRIPTION : https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
  */
-public class TapeEquilibrium implements Solution {
+public class TapeEquilibrium implements SolutionBase {
 	@Override
 	public Object setUp() {
 		int[] A = {3, 1, 2, 4, 3};
 		return solution(A);
 	}
 
+    @MainFunction
 	public int solution(int[] A) {
 		int answer = Integer.MAX_VALUE;
 		int[] sum = new int[A.length];

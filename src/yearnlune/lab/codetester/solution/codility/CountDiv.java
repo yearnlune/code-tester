@@ -1,6 +1,7 @@
 package yearnlune.lab.codetester.solution.codility;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -12,13 +13,14 @@ import yearnlune.lab.codetester.solution.Solution;
  *  0 % N = 0;
  *
  */
-public class CountDiv implements Solution {
+public class CountDiv implements SolutionBase {
 
 	@Override
 	public Object setUp() {
-		return null;
+		return solution(0, 5, 1);
 	}
 
+    @MainFunction
 	public int solution(int A, int B, int K) {
 		int answer = 0;
 

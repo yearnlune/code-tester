@@ -2,7 +2,8 @@ package yearnlune.lab.codetester.solution.codility;
 
 import java.util.Stack;
 
-import yearnlune.lab.codetester.solution.Solution;
+import yearnlune.lab.codetester.handler.MainFunction;
+import yearnlune.lab.codetester.solution.SolutionBase;
 
 /**
  * Project : code-tester
@@ -11,7 +12,7 @@ import yearnlune.lab.codetester.solution.Solution;
  * DATE : 2021.03.01
  * DESCRIPTION : https://app.codility.com/programmers/lessons/7-stacks_and_queues/brackets/
  */
-public class Brackets implements Solution {
+public class Brackets implements SolutionBase {
 	int answer = 1;
 	Stack<Character> stack = new Stack<>();
 
@@ -22,6 +23,7 @@ public class Brackets implements Solution {
 		return solution(S);
 	}
 
+    @MainFunction
 	public int solution(String S) {
 		for (char c : S.toCharArray()) {
 			if (!isNested(c)) {
