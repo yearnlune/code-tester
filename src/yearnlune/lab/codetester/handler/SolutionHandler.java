@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import yearnlune.lab.codetester.solution.SolutionBase;
@@ -40,21 +42,20 @@ public class SolutionHandler {
         String output = "";
         SolutionMeta solutionMeta = solutionFactory.get(solutionName);
         try {
-            if (solutionMeta.getSolution().newInstance() instanceof SolutionBase) {
-                SolutionBase solutionBase = (SolutionBase)solutionMeta.getSolution().newInstance();
-                output = toString(solutionBase.setUp());
+            if (solutionMeta.getSolution().getDeclaredConstructor().newInstance() instanceof SolutionBase solutionBase) {
+				output = toString(solutionBase.setUp());
             }
-        } catch (InstantiationException | IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             e.printStackTrace();
         } catch (NullPointerException e) {
             System.err.println("Not found [" + solutionName + "] solution class");
         }
-        return output;
+		return output;
     }
 
     public <T> String toString(T t) {
         StringBuilder stringBuilder = new StringBuilder();
-        Class tClass = t.getClass();
+        Class<?> tClass = t.getClass();
 
         if (tClass.isPrimitive()) {
             stringBuilder.append(t);
@@ -73,7 +74,7 @@ public class SolutionHandler {
             }
         } else {
             System.out.println("OUTPUT TYPE: " + tClass.getSimpleName());
-            stringBuilder.append(t.toString());
+            stringBuilder.append(t);
         }
 
         return stringBuilder.toString();
@@ -106,7 +107,7 @@ public class SolutionHandler {
             return;
         }
 
-        File[] files = directory.listFiles();
+        File[] files = Optional.ofNullable(directory.listFiles()).orElse(new File[]{});
 
         for (File file : files) {
             if (file.isDirectory()) {
@@ -152,7 +153,7 @@ public class SolutionHandler {
         });
     }
 
-    private <T> Method findMethod(Class<T> solution, String methodName) {
+    private Method findMethod(Class<?> solution, String methodName) {
         Method solutionMethod = null;
         Method[] methods = solution.getDeclaredMethods();
 
