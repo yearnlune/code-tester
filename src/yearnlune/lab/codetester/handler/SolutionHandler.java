@@ -42,11 +42,15 @@ public class SolutionHandler {
         String output = "";
         SolutionMeta solutionMeta = solutionFactory.get(solutionName);
         try {
-            if (solutionMeta.getSolution().getDeclaredConstructor().newInstance() instanceof SolutionBase solutionBase) {
-				output = toString(solutionBase.setUp());
+            if (solutionMeta.getSolution().getDeclaredConstructor().newInstance() instanceof SolutionBase) {
+                SolutionBase solutionBase = (SolutionBase) solutionMeta.getSolution().getDeclaredConstructor().newInstance();
+                Object answer = Optional.ofNullable(solutionBase.setUp()).orElseThrow(IllegalImplementationException::new);
+				output = toString(answer);
             }
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             e.printStackTrace();
+        } catch (IllegalImplementationException e) {
+            System.err.println("Check " + solutionName + ".setUp() class: return value is null");
         } catch (NullPointerException e) {
             System.err.println("Not found [" + solutionName + "] solution class");
         }
