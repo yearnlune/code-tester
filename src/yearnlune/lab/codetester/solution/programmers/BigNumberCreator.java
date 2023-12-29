@@ -10,7 +10,7 @@ import java.util.Stack;
  * Created by IntelliJ IDEA
  * Author : DONGHWAN, KIM
  * DATE : 2021.10.25
- * DESCRIPTION : https://programmers.co.kr/learn/courses/30/lessons/42883
+ * DESCRIPTION : https://school.programmers.co.kr/learn/courses/30/lessons/42883
  * <p>
  * GREEDY
  */
@@ -27,23 +27,20 @@ public class BigNumberCreator implements SolutionBase {
     public String solution(String number, int k) {
         String result = "";
         Stack<Character> stack = new Stack<>();
-        int popCount = 0;
-        char[] numbers = number.toCharArray();
-
-        for (int i = 0; i < numbers.length; ++i) {
-            char candidate = numbers[i];
-            while (!stack.isEmpty() && stack.peek() < candidate && popCount < k) {
-                popCount++;
+        int count = 0;
+        for (int i = 0; i < number.length(); i++) {
+            char candidate = number.charAt(i);
+            while (!stack.isEmpty() && stack.peek() < candidate && count < k) {
                 stack.pop();
+                count++;
             }
-
             if (number.length() - k > stack.size()) {
                 stack.push(candidate);
             }
         }
 
-        for (int i = 0; i < stack.size(); i++) {
-            result += stack.get(i);
+        while (!stack.isEmpty()) {
+            result = stack.pop() + result;
         }
 
         return result;
