@@ -8,6 +8,13 @@ import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Project : code-tester
+ * Created by IntelliJ IDEA
+ * Author : DONGHWAN, KIM
+ * DATE : 2023.12.30
+ * DESCRIPTION : https://www.hackerrank.com/challenges/one-week-preparation-kit-time-conversion/
+ */
 public class TimeConversion implements SolutionBase {
     @Override
     public Object setUp() {

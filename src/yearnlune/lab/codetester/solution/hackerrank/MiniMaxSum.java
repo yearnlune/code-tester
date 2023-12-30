@@ -10,6 +10,13 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * Project : code-tester
+ * Created by IntelliJ IDEA
+ * Author : DONGHWAN, KIM
+ * DATE : 2023.12.30
+ * DESCRIPTION : https://www.hackerrank.com/challenges/one-week-preparation-kit-mini-max-sum/
+ */
 public class MiniMaxSum implements SolutionBase {
     @Override
     public Object setUp() {

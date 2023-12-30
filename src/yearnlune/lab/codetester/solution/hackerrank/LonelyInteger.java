@@ -11,6 +11,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Project : code-tester
+ * Created by IntelliJ IDEA
+ * Author : DONGHWAN, KIM
+ * DATE : 2023.12.30
+ * DESCRIPTION : https://www.hackerrank.com/challenges/one-week-preparation-kit-lonely-integer/
+ */
 public class LonelyInteger implements SolutionBase {
     @Override
     public Object setUp() {
