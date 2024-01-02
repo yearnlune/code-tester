@@ -42,19 +42,29 @@ public class SolutionHandler {
         String output = "";
         SolutionMeta solutionMeta = solutionFactory.get(solutionName);
         try {
-            if (solutionMeta.getSolution().getDeclaredConstructor().newInstance() instanceof SolutionBase) {
-                SolutionBase solutionBase = (SolutionBase) solutionMeta.getSolution().getDeclaredConstructor().newInstance();
-                Object answer = Optional.ofNullable(solutionBase.setUp()).orElseThrow(IllegalImplementationException::new);
-				output = toString(answer);
+            if (solutionMeta == null) {
+                throw new NotFoundSolutionException();
             }
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            if (solutionMeta.getSolution().getDeclaredConstructor().newInstance() instanceof SolutionBase) {
+                SolutionBase solutionBase = (SolutionBase)solutionMeta.getSolution()
+                        .getDeclaredConstructor()
+                        .newInstance();
+                Object answer = Optional.ofNullable(solutionBase.setUp())
+                        .orElseThrow(IllegalImplementationException::new);
+                output = toString(answer);
+            }
+        } catch (InstantiationException |
+                 IllegalAccessException |
+                 InvocationTargetException |
+                 NoSuchMethodException |
+                 NullPointerException e) {
             e.printStackTrace();
         } catch (IllegalImplementationException e) {
             System.err.println("Check " + solutionName + ".setUp() class: return value is null");
-        } catch (NullPointerException e) {
+        } catch (NotFoundSolutionException e) {
             System.err.println("Not found [" + solutionName + "] solution class");
         }
-		return output;
+        return output;
     }
 
     public <T> String toString(T t) {
@@ -111,14 +121,14 @@ public class SolutionHandler {
             return;
         }
 
-        File[] files = Optional.ofNullable(directory.listFiles()).orElse(new File[]{});
+        File[] files = Optional.ofNullable(directory.listFiles()).orElse(new File[] {});
 
         for (File file : files) {
             if (file.isDirectory()) {
                 findClassesByFile(file, packageName + "." + file.getName());
             } else if (file.getName().endsWith(CLASS_FILE_SUFFIX)) {
                 Class<?> clazz = Class.forName(
-                    packageName + '.' + file.getName().replaceAll("\\.class$", ""));
+                        packageName + '.' + file.getName().replaceAll("\\.class$", ""));
                 getMainFunction(clazz);
             }
         }
@@ -149,9 +159,9 @@ public class SolutionHandler {
             SolutionMeta solutionMeta;
 
             solutionMeta = SolutionMeta.builder()
-                .solution(solution)
-                .solutionMethod(method)
-                .build();
+                    .solution(solution)
+                    .solutionMethod(method)
+                    .build();
 
             return solutionMeta;
         });

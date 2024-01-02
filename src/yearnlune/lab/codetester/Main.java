@@ -22,7 +22,7 @@ public class Main {
 		stringBuilder.append(answerString);
 		stringBuilder.append("\n");
 
-		System.out.println(stringBuilder.toString());
+		System.out.println(stringBuilder);
 	}
 
 }
